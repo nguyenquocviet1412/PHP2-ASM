@@ -10,8 +10,8 @@
 //      POST    -> USER/ID/UPDATE       -> UPDATE ($id)   -> LƯU DỮ LIỆU TỪ FORM CẬP NHẬT VÀO DB
 //      GET     -> USER/ID/DELETE       -> DELETE ($id)   -> XÓA BẢN GHI TRONG DB
 
-use Ductong\XuongOop\Controllers\Admin\DashboardController;
-use Ductong\XuongOop\Controllers\Admin\UserController;
+use Admin\Asm\Controllers\Admin\DashboardController;
+use Admin\Asm\Controllers\Admin\UserController;
 
 $router->before('GET|POST', '/admin/*.*', function() {
     if (! isset($_SESSION['user'])) {

@@ -13,13 +13,13 @@
 
 // HTTP Method: get, post, put (path), delete, option, head
 
-use Ductong\XuongOop\Controllers\Client\AboutController;
-use Ductong\XuongOop\Controllers\Client\CartController;
-use Ductong\XuongOop\Controllers\Client\ContactController;
-use Ductong\XuongOop\Controllers\Client\HomeController;
-use Ductong\XuongOop\Controllers\Client\LoginController;
-use Ductong\XuongOop\Controllers\Client\OrderController;
-use Ductong\XuongOop\Controllers\Client\ProductController;
+use Admin\Asm\Controllers\Client\AboutController;
+use Admin\Asm\Controllers\Client\CartController;
+use Admin\Asm\Controllers\Client\ContactController;
+use Admin\Asm\Controllers\Client\HomeController;
+use Admin\Asm\Controllers\Client\LoginController;
+use Admin\Asm\Controllers\Client\OrderController;
+use Admin\Asm\Controllers\Client\ProductController;
 
 $router->get( '/',                  HomeController::class       . '@index');
 $router->get( '/about',             AboutController::class      . '@index');

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ductong\XuongOop\Commons;
+namespace Admin\Asm\Commons;
 
 class Helper
 {

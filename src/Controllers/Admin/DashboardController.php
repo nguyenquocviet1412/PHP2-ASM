@@ -1,10 +1,10 @@
 <?php
 
-namespace Ductong\XuongOop\Controllers\Admin;
+namespace Admin\Asm\Controllers\Admin;
 
-use Ductong\XuongOop\Commons\Controller;
-use Ductong\XuongOop\Commons\Helper;
-use Ductong\XuongOop\Models\Product;
+use Admin\Asm\Commons\Controller;
+use Admin\Asm\Commons\Helper;
+use Admin\Asm\Models\Product;
 
 class DashboardController extends Controller
 {

@@ -1,9 +1,9 @@
 <?php 
 
-namespace Ductong\XuongOop\Controllers\Client;
+namespace Admin\Asm\Controllers\Client;
 
-use Ductong\XuongOop\Commons\Controller;
-use Ductong\XuongOop\Models\Product;
+use Admin\Asm\Commons\Controller;
+use Admin\Asm\Models\Product;
 
 class ProductController extends Controller
 {

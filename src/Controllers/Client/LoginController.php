@@ -1,10 +1,10 @@
 <?php 
 
-namespace Ductong\XuongOop\Controllers\Client;
+namespace Admin\Asm\Controllers\Client;
 
-use Ductong\XuongOop\Commons\Controller;
-use Ductong\XuongOop\Commons\Helper;
-use Ductong\XuongOop\Models\User;
+use Admin\Asm\Commons\Controller;
+use Admin\Asm\Commons\Helper;
+use Admin\Asm\Models\User;
 
 class LoginController extends Controller
 {

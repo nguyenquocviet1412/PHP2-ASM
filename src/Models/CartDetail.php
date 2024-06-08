@@ -1,8 +1,8 @@
 <?php
 
-namespace Ductong\XuongOop\Models;
+namespace Admin\Asm\Models;
 
-use Ductong\XuongOop\Commons\Model;
+use Admin\Asm\Commons\Model;
 
 class CartDetail extends Model 
 {
