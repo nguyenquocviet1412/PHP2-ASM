@@ -18,6 +18,10 @@ $router->before('GET|POST', '/admin/*.*', function() {
         header('location: ' . url('login') );
         exit();
     }
+    if (($_SESSION['user']['type']!=='admin')) {
+        header('location: ' . url('') );
+        exit();
+    }
 });
 
 $router->mount('/admin', function () use ($router) {

@@ -4,15 +4,19 @@ namespace Admin\Asm\Controllers\Client;
 
 use Admin\Asm\Commons\Controller;
 use Admin\Asm\Commons\Helper;
+use Admin\Asm\Models\Category;
 use Admin\Asm\Models\User;
 
 class LoginController extends Controller
 {
     private User $user;
+    private Category $category;
+
 
     public function __construct()
     {
         $this->user = new User();
+        $this->category = new Category();
     }
 
     public function showFormLogin() {
@@ -21,6 +25,21 @@ class LoginController extends Controller
         $this->renderViewClient('login');
     }
 
+    public function index()
+    {
+        auth_check();
+        if (isset($_SESSION['user'])) {
+            $name = $_SESSION['user']['name'];
+        }else{
+            $name='bạn';
+        }
+
+        $categories = $this->category->all();
+
+        $this->renderViewClient('login', [
+            'categories' => $categories
+        ]);
+    }
     public function login() {
         auth_check();
 
@@ -31,7 +50,7 @@ class LoginController extends Controller
                 throw new \Exception('Không tồn tại email: ' . $_POST['email']);
             }
 
-            $flag = password_verify($_POST['password'], $user['password']); 
+            $flag = $_POST['password']==$user['password']?true:false; 
             if ($flag) {
 
                 $_SESSION['user'] = $user;

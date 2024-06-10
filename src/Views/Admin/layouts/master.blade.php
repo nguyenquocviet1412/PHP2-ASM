@@ -1,37 +1,50 @@
 <!DOCTYPE html>
-<html lang="zxx">
-
-<!-- Mirrored from demo.dashboardpack.com/sales-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 May 2024 07:23:13 GMT -->
+<html>
 
 <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>@yield('title')</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PHP2 | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('layouts.partials.head')
 </head>
 
-<body class="crm_body_bg">
+<body class="hold-transition sidebar-mini layout-fixed">
 
+    <div class="wrapper">
 
-    @include('layouts.partials.nav')
-
-    <section class="main_content dashboard_part large_header_bg">
-
+        <!-- Navbar -->
         @include('layouts.partials.topbar')
-
-        <div class="main_content_iner overly_inner ">
-            <div class="container-fluid p-0 ">
-
-                @yield('content')
-
+        <!-- Main Sidebar Container -->
+        @include('layouts.partials.nav')
+        <div class="content-wrapper" style="min-height: 365px;">
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Trang chủ</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item active">Admin</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
             </div>
+            @yield('content')
         </div>
-
         @include('layouts.partials.footer')
-    </section>
 
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
     <div id="back-top" style="display: none;">
         <a title="Go to Top" href="#">
             <i class="ti-angle-up"></i>

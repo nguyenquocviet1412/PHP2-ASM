@@ -20,8 +20,7 @@ class DashboardController extends Controller
 
         $analysisProduct = array_map(function ($item) {
             return [
-                $item['name'],
-                $item['views']
+                $item['name']
             ];
         }, $products);
 

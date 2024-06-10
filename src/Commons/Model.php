@@ -54,18 +54,19 @@ class Model
     public function paginate($page = 1, $perPage = 5)
     {
         $queryBuilder = clone($this->queryBuilder);
-
+        
         $totalPage = ceil($this->count() / $perPage);
 
         $offset = $perPage * ($page - 1);
 
-        $data = $queryBuilder
+        $data = $this->queryBuilder
         ->select('*')
         ->from($this->tableName)
         ->setFirstResult($offset)
         ->setMaxResults($perPage)
         ->orderBy('id', 'desc')
         ->fetchAllAssociative();
+
 
         return [$data, $totalPage];
     }
@@ -135,4 +136,15 @@ class Model
     {
         $this->conn = null;
     }
+
+    public function findByID_category($id)
+    {
+        return $this->queryBuilder
+            ->select('*')
+            ->from($this->tableName)
+            ->where('id_category = ?')
+            ->setParameter(0, $id)
+            ->fetchAssociative();
+    }
 }
+

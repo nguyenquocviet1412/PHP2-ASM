@@ -1,12 +1,6 @@
-<div class="footer_part">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="footer_iner text-center">
-                    <p>2020 © Influence - Designed by <a href="#"> <i class="ti-heart"></i> </a><a
-                            href="#"> Dashboard</a></p>
-                </div>
-            </div>
-        </div>
+<footer class="main-footer">
+    <strong>Web tin tức. <a href="#">PHP2</a></strong>
+    <div class="float-right d-none d-sm-inline-block">
+        <b>Nhóm</b>
     </div>
-</div>
+</footer>
