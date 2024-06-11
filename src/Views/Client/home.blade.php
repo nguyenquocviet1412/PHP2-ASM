@@ -30,6 +30,36 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <style>
+        .phantrang{
+            margin: 32px;
+        }
+        .trangchon{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            font-weight: bold;
+            border-radius: 0.375rem;
+            display: inline-block;
+            background-color: rgb(202 138 4);
+            text-align: center;
+        }
+        .trang{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            font-weight: bold;
+            border-radius: 0.375rem;
+            display: inline-block;
+            background-color:#A3A3A3;
+            text-align: center;
+        }
+    </style>    
 </head>
 
 <body>
@@ -57,7 +87,7 @@
                             <div class="col-xs-16 col-sm-8">
                                 <div class="row">
                                     <div id="weather" class="col-xs-16 col-sm-8 col-lg-9">
-                                    Welcome {{ $name }} to my website!
+                                        Welcome {{ $name }} to my website!
                                     </div>
                                     <div id="time-date" class="col-xs-16 col-sm-8 col-lg-7"></div>
                                 </div>
@@ -92,7 +122,7 @@
                                     <ul class="nav navbar-nav text-uppercase main-nav ">
                                         <li class="active"><a href="{{url()}}">Trang chủ</a></li>
                                         @foreach ($categories as $category)
-                                            <li><a href ='{{ url('categories/' . $category['id']) }}'>{{ $category['name'] }}</a></li>
+                                        <li><a href='{{ url('categories/' . $category['id']) }}'>{{ $category['name'] }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -126,7 +156,7 @@
 
             <div class="row">
                 <div class="ind">
-                @foreach ($posts as $post)
+                    @foreach ($posts as $post)
                     <div class="col">
                         <li class=bantin>
                             <a href='{{ url('posts/' . $post['id']) }}'><img src='{{ $post['image']}}' width='200px' height='150px' /></a>
@@ -135,8 +165,22 @@
                             </a>
                         </li>
                     </div>
-                @endforeach
+                    @endforeach
                 </div>
+            </div>
+
+            <div >
+                <?php
+                $page = 1;
+                for ($i = 1; $i <= $totalPage; $i++)
+                    if ($i == $page) {
+                        echo "<a href='?page=" . $i . "' class='trangchon'>".$i."</a>";
+                    } else {
+                        echo "<a href='?page=" . $i . "' class='trang'>".$i."</a>";
+                    }
+                ?>
+                
+                
             </div>
 
             <!-- calendar start -->
