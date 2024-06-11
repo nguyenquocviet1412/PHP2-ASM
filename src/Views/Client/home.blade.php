@@ -56,7 +56,9 @@
                             </div>
                             <div class="col-xs-16 col-sm-8">
                                 <div class="row">
-                                    <div id="weather" class="col-xs-16 col-sm-8 col-lg-9"></div>
+                                    <div id="weather" class="col-xs-16 col-sm-8 col-lg-9">
+                                    Welcome {{ $name }} to my website!
+                                    </div>
                                     <div id="time-date" class="col-xs-16 col-sm-8 col-lg-7"></div>
                                 </div>
                             </div>

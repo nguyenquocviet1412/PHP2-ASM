@@ -10,6 +10,7 @@
 //      POST    -> USER/ID/UPDATE       -> UPDATE ($id)   -> LƯU DỮ LIỆU TỪ FORM CẬP NHẬT VÀO DB
 //      GET     -> USER/ID/DELETE       -> DELETE ($id)   -> XÓA BẢN GHI TRONG DB
 
+use Admin\Asm\Controllers\Admin\CategoryController;
 use Admin\Asm\Controllers\Admin\DashboardController;
 use Admin\Asm\Controllers\Admin\UserController;
 
@@ -39,4 +40,15 @@ $router->mount('/admin', function () use ($router) {
         $router->get('/{id}/delete',    UserController::class . '@delete');
     });
     
+
+    // CRUD CATEGORIES
+    $router->mount('/categories', function () use ($router) {
+        $router->get('/',               CategoryController::class . '@index');
+        $router->get('/create',         CategoryController::class . '@create');
+        $router->post('/store',         CategoryController::class . '@store');
+        $router->get('/{id}/show',      CategoryController::class . '@show');
+        $router->get('/{id}/edit',      CategoryController::class . '@edit');
+        $router->post('/{id}/update',   CategoryController::class . '@update');
+        $router->get('/{id}/delete',    CategoryController::class . '@delete');
+    });
 });

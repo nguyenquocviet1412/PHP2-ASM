@@ -3,20 +3,16 @@
 namespace Admin\Asm\Controllers\Client;
 
 use Admin\Asm\Commons\Controller;
-use Admin\Asm\Commons\Helper;
 use Admin\Asm\Models\Category;
 use Admin\Asm\Models\Posts;
-use Admin\Asm\Models\Product;
 
 class HomeController extends Controller
 {
-    private Product $product;
     private Category $category;
     private Posts $post;
 
     public function __construct()
     {
-        $this->product = new Product();
         $this->category = new Category();
         $this->post = new Posts();
     }
@@ -31,18 +27,24 @@ class HomeController extends Controller
 
         $categories = $this->category->all();
         $posts = $this->post->all();
-
+        [$posts  , $totalPage] = $this->post->paginate($_GET['page'] ?? 1);
         $this->renderViewClient('home', [
             'name' => $name,
             'categories' => $categories,
-            'posts' => $posts
+            'posts' => $posts,
+            'totalPage' => $totalPage
         ]);
 
-        // [$post  , $totalPage] = $this->post->paginate($_GET['page'] ?? 1);
-
-        // $this->renderViewClient('posts.index', [
-        //     'post' => $post, 
-        //     'totalPage' => $totalPage
-        // ]);
     }
+
+    // public function index1()
+    // {
+
+    //     [$posts  , $totalPage] = $this->post->paginate($_GET['page'] ?? 1);
+
+    //     $this->renderViewClient('home', [
+    //         'posts' => $posts, 
+    //         'totalPage' => $totalPage
+    //     ]);
+    // }
 }

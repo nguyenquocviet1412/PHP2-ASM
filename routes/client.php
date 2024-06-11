@@ -23,6 +23,7 @@ use Admin\Asm\Controllers\Client\OrderController;
 use Admin\Asm\Controllers\Client\PostsController;
 use Admin\Asm\Controllers\Client\ProductController;
 
+
 $router->get( '/',                  HomeController::class       . '@index');
 $router->get( '/about',             AboutController::class      . '@index');
 
@@ -35,18 +36,18 @@ $router->get( '/posts/{id}',        PostsController::class      . '@detail');
 $router->get( '/categories',        CategoriesController::class . '@index');
 $router->get( '/categories/{id}',   CategoriesController::class . '@detail');
 
-$router->get( '/products',          ProductController::class    . '@index');
-$router->get( '/products/{id}',     ProductController::class    . '@detail');
+// $router->get( '/products',          ProductController::class    . '@index');
+// $router->get( '/products/{id}',     ProductController::class    . '@detail');
 
 $router->get( '/login',             LoginController::class      . '@index');
 $router->get( '/login',             LoginController::class      . '@showFormLogin');
 $router->post( '/handle-login',     LoginController::class      . '@login');
 $router->get( '/logout',            LoginController::class      . '@logout');
 
-$router->get('cart/add',           CartController::class . '@add');
-$router->get('cart/quantityInc',   CartController::class . '@quantityInc');
-$router->get('cart/quantityDec',   CartController::class . '@quantityDec');
-$router->get('cart/remove',        CartController::class . '@remove');
-$router->get('cart/detail',        CartController::class . '@detail');
+// $router->get('cart/add',           CartController::class . '@add');
+// $router->get('cart/quantityInc',   CartController::class . '@quantityInc');
+// $router->get('cart/quantityDec',   CartController::class . '@quantityDec');
+// $router->get('cart/remove',        CartController::class . '@remove');
+// $router->get('cart/detail',        CartController::class . '@detail');
 
-$router->post('order/checkout',     OrderController::class . '@checkout');
+// $router->post('order/checkout',     OrderController::class . '@checkout');

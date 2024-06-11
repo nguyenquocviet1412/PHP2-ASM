@@ -90,7 +90,7 @@
                                     <ul class="nav navbar-nav text-uppercase main-nav ">
                                         <li class="active"><a href="{{url()}}">Trang chủ</a></li>
                                         @foreach ($categories as $category)
-                                            <li><a href ='{{ url('categories/' . $category['id']) }}'>{{ $category['name'] }}</a></li>
+                                        <li><a href='{{ url('categories/' . $category['id']) }}'>{{ $category['name'] }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -121,19 +121,28 @@
             </div>
 
 
+            @if (!empty($_SESSION['error']))
+                <div class="alert alert-warning mt-3 mb-3">
+                    {{ $_SESSION['error'] }}
+                </div>
+
+                @php
+                    unset($_SESSION['error']);
+                @endphp
+            @endif
 
             <div class="row">
                 <div class="ind">
-                @foreach ($posts as $post)
+                    @foreach ($posts_category_id as $post)
                     <div class="col">
                         <li class=bantin>
-                            <a href='{{ url('posts/' . $post['id']) }}'><img src='{{ $post['image']}}' width='200px' height='150px' /></a>
-                            <a href='{{ url('posts/' . $post['id']) }}'>
+                            <a href='{{ url('posts_category_id/' . $post['id']) }}'><img src='{{ $post['image']}}' width='200px' height='150px' /></a>
+                            <a href='{{ url('posts_category_id/' . $post['id']) }}'>
                                 <h4>{{ $post['title'] }}</h4>
                             </a>
                         </li>
                     </div>
-                @endforeach
+                    @endforeach
                 </div>
             </div>
 

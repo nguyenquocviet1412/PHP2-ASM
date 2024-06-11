@@ -22,11 +22,11 @@
 @extends('layouts.master')
 
 @section('title')
-    Chi tiết người dùng: {{ $user['name'] }}
+    Chi tiết danh mục: {{ $category['name'] }}
 @endsection
 
 @section('content')
-    <h1>Chi tiết người dùng: {{ $user['name'] }}</h1>
+    <h1>Chi tiết danh mục: {{ $category['name'] }}</h1>
 
     <table class="table table-striped">
         <thead>
@@ -37,7 +37,7 @@
         </thead>
         <tbody>
 
-            @foreach ($user as $field => $value)
+            @foreach ($category as $field => $value)
             <tr>
                 <td>{{ $field }}</td>
                 <td>{{ $value }}</td>

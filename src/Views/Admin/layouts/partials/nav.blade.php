@@ -13,7 +13,7 @@
                 <img src="{{ asset('src/Views/Admin/layouts/partials/Public/admin/dist/img/Long.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Phạm Việt Long</a>
+                <a href="#" class="d-block">{{ $name }}</a>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
                 <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="index.php" class="nav-link active">
+                    <a href="{{url('admin')}}" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Trang chủ
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="ds_danhmuc.php" class="nav-link">
+                    <a href="{{url('admin/categories')}}" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Danh mục
@@ -41,13 +41,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="{{url('admin/categories/create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/categories')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách</p>
                             </a>
@@ -79,23 +79,23 @@
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="ds_thanhvien.php" class="nav-link">
+                    <a href="{{url('/admin/users')}}" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Thành viên
+                            Tài khoản
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-info right"></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('admin/users/create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Thêm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{url('/admin/users')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách</p>
                             </a>
@@ -103,55 +103,7 @@
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="ds_quangcao.php" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Quảng cáo
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="ds_binhluan.php" class="nav-link">
-                        <i class="nav-icon fas fa-copy"></i>
-                        <p>
-                            Bình luận
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right"></span>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Thêm</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Danh sách</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="logout.php" class="nav-link">
+                    <a href="{{ url('logout') }}" class="nav-link">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>Đăng xuất</p>
                     </a>
