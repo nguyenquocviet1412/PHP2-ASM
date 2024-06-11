@@ -46,3 +46,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+        .phantrang{
+            margin: 32px;
+        }
+        .trangchon{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            font-weight: bold;
+            border-radius: 0.375rem;
+            display: inline-block;
+            background-color: rgb(202 138 4);
+            text-align: center;
+        }
+        .trang{
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: white;
+            font-weight: bold;
+            border-radius: 0.375rem;
+            display: inline-block;
+            background-color:#A3A3A3;
+            text-align: center;
+        }
+    </style>

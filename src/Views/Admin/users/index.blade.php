@@ -71,6 +71,15 @@
 
                             </tbody>
                         </table>
+                        <?php
+                    $page = 1;
+                    for ($i = 1; $i <= $totalPage; $i++)
+                        if ($i == $page) {
+                            echo "<a href = 'users?page=".$i." ' class='trangchon'> $i </a>";
+                        } else {
+                            echo "<a href = 'users?page=".$i." ' class='trang'> $i </a>";
+                        }
+                    ?>
                     </div>
                 </div>
             </div>
